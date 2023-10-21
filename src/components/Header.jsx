@@ -1,7 +1,7 @@
 import React from "react";
-import { Mongodb, Nodejs, Profile, Reactjs, Redux } from "../assets";
+import { Profile } from "../assets";
 
-const Header = () => {
+const Header = ({ darkMode }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row px-8 md:px-10 gap-10 2xl:gap-20 py-20">
       <div className="flex flex-col mb-20 lg:mb-0">
@@ -24,7 +24,7 @@ const Header = () => {
         </h1>
 
         <p className="text-md text-black dark:text-gray-100 mt-5 2xl:mt-10">
-          Full-Stack Web Developer with the ability to learn nad collaborate in
+          Full-Stack Web Developer with the ability to learn and collaborate in
           rapidly changing environments and compositions.
         </p>
 
@@ -41,35 +41,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="w-[320px] h-[290px] md:w-[600px] md:h-[600px] 2xl:w-[700px] 2xl:h-[700px] rounded-full border border-gray-600 dark:border-gray-200 relative md:mt-20 lg:mt-0 flex item-center justify-center ">
+      <div className="w-[320px] h-[290px] md:w-[600px] md:h-[600px] 2xl:w-[700px] 2xl:h-[700px] rounded-full border-gray-600 dark:border-gray-200 relative md:mt-20 lg:mt-0 flex item-center justify-center">
         <img
+          // src={darkMode ? Profile : darkProfile}
           src={Profile}
-          className="w-auto h-full absolute -top-5 md:-top-10"
+          className="w-auto h-full absolute -top-5 md:-top-10 rounded-full"
           alt="img"
         />
-
-        <div className="relative w-full h-full rounded-full">
-          <img
-            src={Reactjs}
-            alt="img"
-            className="absolute top-7 md:top-20 left-3 2xl:left-12 w-12 h-16 md:w-20 md:h-20"
-          />
-          <img
-            src={Mongodb}
-            alt="img"
-            className="absolute bottom-7 md:bottom-20 left-0 2xl:left-12 w-16 h-12 md:w-20 md:h-20"
-          />
-          <img
-            src={Redux}
-            alt="img"
-            className="absolute top-3 md:top-20 right-0 2xl:right-8 w-16 h-16 md:w-20 md:h-20"
-          />
-          <img
-            src={Nodejs}
-            alt="img"
-            className="absolute bottom-7 md:bottom-20 right-0 2xl:right-8 w-16 h-16 md:w-20 md:h-20"
-          />
-        </div>
       </div>
     </div>
   );

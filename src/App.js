@@ -20,9 +20,7 @@ function App() {
       className={`w-full h-full min-h-[100vh] bg-white ${darkMode && "dark"}`}
     >
       <div className="w-full h-full min-h-[100vh] bg-white">
-        <div
-          className="dark:bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e]"
-        >
+        <div className="dark:bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e]">
           <Navbar
             darkMode={darkMode}
             isOpen={isOpen}
@@ -31,7 +29,7 @@ function App() {
           />
 
           <section id="home" className="px-0 lg:px-5 2xl:px-40 py-10 lg:py-0">
-            <Header />
+            <Header darkMode={darkMode} />
           </section>
         </div>
       </div>
